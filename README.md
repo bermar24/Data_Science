@@ -6,4 +6,7 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 ## 🗂️ Folder Legend  
 
 - **Lecture_1** – 🎮 Tic-Tac-Toe pseudocode and Python implementation  
-  *(Contributors: Benni, Emine, Daniel)*  
+  *(Contributors: Benni, Emine, Daniel and Joaquin)*  
+
+- **Lecture_2** –  EDA Project: King County Housing Dataset (Group 4 - The Young Tech Couple)
+  *(Contributors: Will, Roic, Brian and Joaquin)*  
