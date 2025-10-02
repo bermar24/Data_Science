@@ -10,3 +10,6 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 
 - **Lecture_2** –  EDA Project: King County Housing Dataset (Group 4 - The Young Tech Couple)
   *(Contributors: Will, Roic, Brian and Joaquin)*  
+
+- **Lecture_3** - Exploring KNN and Distance Metrics (Group 4 - Exploring KNN and Distance Metrics)
+  *(contributors: David, Daniela, Emin, Joaquin)
