@@ -17,7 +17,7 @@ X, y = iris.data[:, :2], iris.target   # use only 2 features for visualization
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 # Train with Euclidean distance
-knn_euclidean = KNeighborsClassifier(n_neighbors=5, metric='euclidean')
+knn_euclidean = KNeighborsClassifier(n_neighbors=7, metric='euclidean')
 knn_euclidean.fit(X_train, y_train)
 y_pred = knn_euclidean.predict(X_test)
 acc_euclidean = accuracy_score(y_test, y_pred)
@@ -72,19 +72,47 @@ knn_euclidean_grid = KNeighborsClassifier(n_neighbors=5, metric='euclidean')
 knn_euclidean_grid.fit(X_train_syn, y_train_syn)
 plot_decision_boundary(knn_euclidean_grid, X_syn, y_syn, "Grid - Euclidean", class_names=["Class 0", "Class 1"])
 
-# Part 4: Experimenting with K
+# Part 4: Experimenting with K (Comparison Table)
 
 k_values = [1, 3, 5, 7, 15]
-results = []
+rows = []
+
+# Use full iris features for fair comparison
+iris_full = load_iris()
+X_full, y_full = iris_full.data, iris_full.target
+X_train_full, X_test_full, y_train_full, y_test_full = train_test_split(
+    X_full, y_full, test_size=0.3, random_state=42, stratify=y_full)
+
+# Grid-like synthetic dataset (already created above as X_syn, y_syn)
+X_train_syn, X_test_syn, y_train_syn, y_test_syn = train_test_split(
+    X_syn, y_syn, test_size=0.3, random_state=42, stratify=y_syn)
 
 for k in k_values:
-    knn_k = KNeighborsClassifier(n_neighbors=k, metric='euclidean')
-    # knn_k.fit(X_train, y_train)
-    # y_pred_k = knn_k.predict(X_test)
-    # acc = accuracy_score(y_test, y_pred_k)
-    scores = cross_val_score(knn_k, X, y, cv=5)
-    results.append([k, scores.mean()])
+    # Iris (Euclidean)
+    knn_iris_euc = KNeighborsClassifier(n_neighbors=k, metric='euclidean')
+    knn_iris_euc.fit(X_train_full, y_train_full)
+    y_pred_iris_euc = knn_iris_euc.predict(X_test_full)
+    acc_iris_euc = accuracy_score(y_test_full, y_pred_iris_euc)
 
-acc_table = pd.DataFrame(results, columns=["k", "Accuracy (Iris, Euclidean)"])
-print("\nAccuracy for different k values:")
-print(acc_table)
+    # Grid (Manhattan)
+    knn_grid_man = KNeighborsClassifier(n_neighbors=k, metric='manhattan')
+    knn_grid_man.fit(X_train_syn, y_train_syn)
+    y_pred_grid_man = knn_grid_man.predict(X_test_syn)
+    acc_grid_man = accuracy_score(y_test_syn, y_pred_grid_man)
+
+    # Grid (Euclidean)
+    knn_grid_euc = KNeighborsClassifier(n_neighbors=k, metric='euclidean')
+    knn_grid_euc.fit(X_train_syn, y_train_syn)
+    y_pred_grid_euc = knn_grid_euc.predict(X_test_syn)
+    acc_grid_euc = accuracy_score(y_test_syn, y_pred_grid_euc)
+
+    rows.append({
+        "k": k,
+        "Iris (Euclidean)": acc_iris_euc,
+        "Grid (Manhattan)": acc_grid_man,
+        "Grid (Euclidean)": acc_grid_euc
+    })
+
+acc_table = pd.DataFrame(rows)
+print("\nAccuracy comparison for different k values:")
+print(acc_table.to_string(index=False))
