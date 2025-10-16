@@ -13,3 +13,7 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 
 - **Lecture_3** - Exploring KNN and Distance Metrics (Group 4 - Exploring KNN and Distance Metrics)
   *(contributors: David, Daniela, Emin, Joaquin)
+
+- **Lecture_4** –  Regression Project: Linear Regression vs Logistic Regression. Using King County Housing Dataset ckeaned from Lecture_2
+(Group 4 - The Young Tech Couple)
+  *(Contributors: Will, Roic and Joaquin)* 
