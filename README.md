@@ -17,3 +17,7 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 - **Lecture_4** –  Regression Project: Linear Regression vs Logistic Regression. Using King County Housing Dataset ckeaned from Lecture_2
 (Group 4 - The Young Tech Couple)
   *(Contributors: Will, Roic and Joaquin)* 
+
+- **Lecture_5** –  Decision Trees. Using King County Housing Dataset. 
+  (Group 3 - )
+  *(Contributors: Emine, Daniel and Joaquin)*
