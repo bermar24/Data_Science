@@ -22,4 +22,7 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
   *(Contributors: Emine, Daniel and Joaquin)*
 
 - **Lecture_6** –  Ensemble Methods Lab. Using UCI Student Performance Dataset. (Group 2 - )
-  *(Contributors: Emine, Daniel and Joaquin)*
+  *(Contributors: Emine, David, Will and Joaquin)*
+
+- **Final_Projcect** –  Final Project: 
+  *(Contributors: Will, Emin and Joaquin)*
