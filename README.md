@@ -18,6 +18,8 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 (Group 4 - The Young Tech Couple)
   *(Contributors: Will, Roic and Joaquin)* 
 
-- **Lecture_5** –  Decision Trees. Using King County Housing Dataset. 
-  (Group 3 - )
+- **Lecture_5** –  Decision Trees. Using King County Housing Dataset. (Group 3 - )
+  *(Contributors: Emine, Daniel and Joaquin)*
+
+- **Lecture_6** –  Ensemble Methods Lab. Using UCI Student Performance Dataset. (Group 2 - )
   *(Contributors: Emine, Daniel and Joaquin)*
