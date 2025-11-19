@@ -47,17 +47,17 @@ pip install -r requirements.txt
 
 **Basic usage (assuming Twitter_Data.csv is in the same directory):**
 ```bash
-python twitter_sentiment_main.py
+python Twitter_Sentiment_main.py
 ```
 
 **With custom data path:**
 ```bash
-python twitter_sentiment_main.py --data_path /path/to/Twitter_Data.csv
+python Twitter_Sentiment_main.py --data_path /path/to/Twitter_Data.csv
 ```
 
 **With custom random state for reproducibility:**
 ```bash
-python twitter_sentiment_main.py --random_state 123
+python Twitter_Sentiment_main.py --random_state 123
 ```
 
 ## 📊 What the Pipeline Does
