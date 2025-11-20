@@ -24,5 +24,5 @@ Here I’ll collect all the little projects, experiments, and brain-twisters fro
 - **Lecture_6** –  Ensemble Methods Lab. Using UCI Student Performance Dataset. (Group 2 - )
   *(Contributors: Emine, David, Will and Joaquin)*
 
-- **Final_Projcect** –  Final Project: 
+- **Final_Projcect** –  Final Project: Twitter Sentiment Analysis Using Classical & Neural Models
   *(Contributors: Will, Emin and Joaquin)*
