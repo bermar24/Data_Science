@@ -58,6 +58,8 @@ python Twitter_Sentiment_main.py --data_path /path/to/Twitter_Data.csv
 **With custom random state for reproducibility:**
 ```bash
 python Twitter_Sentiment_main.py --random_state 123
+# save log in a file run10000.log
+python Twitter_Sentiment_main.py > logs/run10000.log 2>&1
 ```
 
 ## 📊 What the Pipeline Does

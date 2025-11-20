@@ -63,7 +63,7 @@ from tensorflow.keras.utils import to_categorical
 
 # Set variables
 DATA_PATH = 'twitter_data.csv'
-SAMPLE_SIZE = None # Set to an integer for sampling, or None for full dataset
+SAMPLE_SIZE = 1000 # Set to an integer for sampling, or None for full dataset
 
 # Set style and warnings
 warnings.filterwarnings('ignore')
@@ -870,8 +870,8 @@ class TwitterSentimentAnalyzer:
         print("\n" + comparison_df.to_string(index=False))
 
         # Save to CSV
-        comparison_df.to_csv('model_comparison.csv', index=False)
-        print("\nComparison table saved to 'model_comparison.csv'")
+        comparison_df.to_csv(f"logs/{SAMPLE_SIZE}_model_comparison.csv", index=False)
+        print(f"\nComparison table saved to 'f{SAMPLE_SIZE}_model_comparison.csv'")
 
         # Create visualization
         self.plot_model_comparison(comparison_data)
